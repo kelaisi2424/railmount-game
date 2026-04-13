@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Railmount Online Free - Train Puzzle Game | RailmountGame.com</title>
+  <meta name="description" content="Play Railmount online for free! A brilliant train puzzle game by Hempuli. Draw rails, guide trains, and solve mind-bending puzzles directly in your browser. No download required.">
+  <meta name="keywords" content="railmount, railmount game, railmount online, play railmount, train puzzle game, hempuli game, browser puzzle game, free online puzzle">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://railmountgame.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Play Railmount Online Free - Train Puzzle Game">
+  <meta property="og:description" content="Draw rails, guide trains, and solve puzzles in this brilliant browser game by Hempuli. Play free, no download needed.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://railmountgame.com/">
+  <meta property="og:site_name" content="RailmountGame.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Play Railmount Online Free">
+  <meta name="twitter:description" content="A mind-bending train puzzle game by Hempuli. Play directly in your browser!">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Railmount",
+    "url": "https://railmountgame.com/",
+    "description": "A train puzzle game where you draw rails to guide trains to their destinations.",
+    "applicationCategory": "Game",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Hempuli"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "17",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Railmount free to play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Railmount is completely free to play online. No downloads, no sign-ups, and no hidden costs. Just open the page and start solving train puzzles right away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to download anything?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Railmount runs directly in your web browser using HTML5 technology. It works on Chrome, Firefox, Safari, and Edge without any plugins or installations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play Railmount on my phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Railmount is optimized for both desktop and mobile browsers. You can play on your smartphone or tablet with touch controls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who made Railmount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Railmount was created by Hempuli, the acclaimed indie game developer known for the award-winning puzzle game Baba Is You."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Railmount safe for kids?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Railmount is a family-friendly puzzle game with no violence and no inappropriate content. It's suitable for players of all ages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many levels does Railmount have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Railmount features multiple puzzles with increasing difficulty. New challenges are designed to test your spatial reasoning and problem-solving skills as you progress."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rail: {
+              bg: '#0a0a0f',
+              card: '#12121a',
+              border: '#1e1e2e',
+              green: '#22c55e',
+              orange: '#ea580c',
+              muted: '#6b7280',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'system-ui', 'sans-serif'],
+            body: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Outfit 500, 700 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-rail-bg text-gray-200 font-body min-h-screen">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="/" class="font-heading font-bold text-lg text-white flex items-center gap-2 hover:text-rail-green transition-colors">
+        <span class="text-2xl">&#x1F682;</span>
+        <span>RailmountGame.com</span>
+      </a>
+      <a href="#game" class="bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold text-sm px-5 py-2 rounded-lg transition-all hover:shadow-lg hover:shadow-rail-green/20">
+        Play Now &darr;
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero-section relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+    <div class="hero-grid absolute inset-0"></div>
+    <div class="relative max-w-[1200px] mx-auto px-4 text-center">
+      <h1 class="font-heading font-bold text-4xl md:text-6xl text-white mb-4 leading-tight">
+        Play <span class="text-rail-green">Railmount</span> Online Free
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+        A mind-bending train puzzle game by Hempuli. Draw rails, guide trains, solve puzzles &mdash; all in your browser.
+      </p>
+      <a href="#game" class="inline-flex items-center gap-2 bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:shadow-rail-green/30 hover:-translate-y-0.5">
+        <span class="text-2xl">&#9654;</span>
+        Play Now &mdash; Free, No Download
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-[1200px] mx-auto px-4">
+
+    <!-- ===== AD SLOT #1 (Top Leaderboard) ===== -->
+    <!-- Replace with AdSense code: ca-pub-XXXXX slot-XXXXX -->
+    <div class="ad-slot" id="ad-top">
+      <span>Advertisement</span>
+    </div>
+
+    <!-- ===== GAME SECTION ===== -->
+    <section id="game" class="py-8 scroll-mt-20">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-6">
+        Play Railmount
+      </h2>
+
+      <div class="game-wrapper max-w-[960px] mx-auto">
+        <!-- Loading State -->
+        <div id="game-loading" class="game-loading">
+          <div class="spinner"></div>
+          <p class="mt-4 text-gray-400 text-sm">Loading Railmount...</p>
+        </div>
+
+        <!-- Game iframe (lazy loaded) -->
+        <iframe
+          id="game-iframe"
+          class="game-iframe"
+          title="Railmount - Train Puzzle Game"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="flex items-center justify-center gap-3 mt-4 max-w-[960px] mx-auto flex-wrap">
+        <button id="btn-fullscreen" class="toolbar-btn" title="Fullscreen">
+          <span>&#x26F6;</span> Fullscreen
+        </button>
+        <button id="btn-reload" class="toolbar-btn" title="Reload Game">
+          <span>&#x1F504;</span> Reload
+        </button>
+        <div class="toolbar-btn cursor-default" title="User Rating">
+          <span>&#x2B50;</span> Rate 5/5
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AD SLOT #2 (Mid Content) ===== -->
+    <!-- Replace with AdSense code: ca-pub-XXXXX slot-XXXXX -->
+    <div class="ad-slot" id="ad-mid">
+      <span>Advertisement</span>
+    </div>
+
+    <!-- ===== CONTENT SECTION (2 Columns) ===== -->
+    <section class="py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- Left Column: Main Content -->
+      <div class="lg:col-span-2 space-y-12">
+
+        <!-- What is Railmount -->
+        <div>
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4">What is Railmount?</h2>
+          <div class="space-y-4 text-gray-300 leading-relaxed">
+            <p>
+              Railmount is an inventive train puzzle game that challenges you to lay down tracks and guide locomotives to their destinations. In each level, you are presented with a grid where trains need to travel from point A to point B, and it is up to you to draw the connecting rails. The Railmount game combines spatial thinking with creative route planning, making every puzzle a satisfying challenge to solve. You can play Railmount online right here in your browser with zero setup required.
+            </p>
+            <p>
+              What sets Railmount apart from other browser puzzle games is the elegant design philosophy of its creator. Hempuli, the indie developer behind the critically acclaimed Baba Is You, brings the same knack for clever rule-based mechanics to this train puzzle game. Each level introduces new constraints and ideas that keep the experience fresh. Whether you are a longtime fan of Hempuli games or discovering this developer for the first time, Railmount online delivers a polished and thought-provoking puzzle experience you can enjoy anywhere.
+            </p>
+          </div>
+        </div>
+
+        <!-- How to Play -->
+        <div>
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4">How to Play Railmount</h2>
+          <ol class="space-y-3 text-gray-300 leading-relaxed list-none">
+            <li class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-rail-green/10 text-rail-green font-heading font-bold flex items-center justify-center text-sm border border-rail-green/20">1</span>
+              <span>Observe the level layout &mdash; identify where each train starts and where it needs to arrive.</span>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-rail-green/10 text-rail-green font-heading font-bold flex items-center justify-center text-sm border border-rail-green/20">2</span>
+              <span>Use your mouse (or finger on mobile) to drag and draw rail segments connecting the routes.</span>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-rail-green/10 text-rail-green font-heading font-bold flex items-center justify-center text-sm border border-rail-green/20">3</span>
+              <span>Make sure every train can safely reach its destination without collisions or dead ends.</span>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-rail-green/10 text-rail-green font-heading font-bold flex items-center justify-center text-sm border border-rail-green/20">4</span>
+              <span>Complete the puzzle to unlock progressively more complex and rewarding challenges.</span>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Why Play Here -->
+        <div>
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-6">Why Play Railmount on RailmountGame.com?</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="feature-card">
+              <div class="text-3xl mb-3">&#x1F310;</div>
+              <h3 class="font-heading font-bold text-white mb-1">Free & Online</h3>
+              <p class="text-gray-400 text-sm">Play Railmount for free directly in your browser. No downloads, no accounts, no hassle.</p>
+            </div>
+            <div class="feature-card">
+              <div class="text-3xl mb-3">&#x1F4BB;</div>
+              <h3 class="font-heading font-bold text-white mb-1">Works Everywhere</h3>
+              <p class="text-gray-400 text-sm">Fully compatible with desktop, tablet, and mobile. Chrome, Firefox, Safari, and Edge all supported.</p>
+            </div>
+            <div class="feature-card">
+              <div class="text-3xl mb-3">&#x26A1;</div>
+              <h3 class="font-heading font-bold text-white mb-1">Instant Play</h3>
+              <p class="text-gray-400 text-sm">Open the page and start playing immediately. No loading screens, no waiting around.</p>
+            </div>
+            <div class="feature-card">
+              <div class="text-3xl mb-3">&#x1F512;</div>
+              <h3 class="font-heading font-bold text-white mb-1">Safe & Secure</h3>
+              <p class="text-gray-400 text-sm">No intrusive pop-ups, no malware. A clean, safe gaming experience for everyone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="space-y-6">
+        <!-- Game Info Card -->
+        <div class="bg-rail-card border border-rail-border rounded-xl p-6">
+          <h3 class="font-heading font-bold text-white text-lg mb-4 flex items-center gap-2">
+            <span>&#x1F3AE;</span> Game Info
+          </h3>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Game</dt>
+              <dd class="text-white font-medium">Railmount</dd>
+            </div>
+            <div class="border-t border-rail-border"></div>
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Developer</dt>
+              <dd class="text-white font-medium">Hempuli</dd>
+            </div>
+            <div class="border-t border-rail-border"></div>
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Genre</dt>
+              <dd class="text-white font-medium">Puzzle</dd>
+            </div>
+            <div class="border-t border-rail-border"></div>
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Platform</dt>
+              <dd class="text-white font-medium">Browser (HTML5)</dd>
+            </div>
+            <div class="border-t border-rail-border"></div>
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Price</dt>
+              <dd class="text-rail-green font-bold">Free</dd>
+            </div>
+            <div class="border-t border-rail-border"></div>
+            <div class="flex justify-between items-center">
+              <dt class="text-gray-500">Rating</dt>
+              <dd class="text-yellow-400 flex items-center gap-1">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+                <span class="text-white font-medium ml-1">4.9/5</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- AD SLOT #3 (Sidebar) -->
+        <!-- Replace with AdSense code: ca-pub-XXXXX slot-XXXXX -->
+        <div class="ad-slot" id="ad-side">
+          <span>Advertisement</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="py-12 border-t border-rail-border">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-8">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-3">
+
+        <details class="faq-item group">
+          <summary class="faq-summary">
+            <span>Is Railmount free to play?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, Railmount is completely free to play online. No downloads, no sign-ups, and no hidden costs. Just open the page and start solving train puzzles right away.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">
+            <span>Do I need to download anything?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>No. Railmount runs directly in your web browser using HTML5 technology. It works on Chrome, Firefox, Safari, and Edge without any plugins or installations.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">
+            <span>Can I play Railmount on my phone?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! Railmount is optimized for both desktop and mobile browsers. You can play on your smartphone or tablet with touch controls.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">
+            <span>Who made Railmount?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Railmount was created by Hempuli, the acclaimed indie game developer known for the award-winning puzzle game Baba Is You. Hempuli is recognized for creating innovative and thought-provoking puzzle experiences.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">
+            <span>Is Railmount safe for kids?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Absolutely. Railmount is a family-friendly puzzle game with no violence, no ads, and no inappropriate content. It is suitable for players of all ages.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">
+            <span>How many levels does Railmount have?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Railmount features multiple puzzles with increasing difficulty. New challenges are designed to test your spatial reasoning and problem-solving skills as you progress.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===== RELATED GAMES ===== -->
+    <section class="py-12 border-t border-rail-border">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-8">Games Like Railmount</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <a href="#" class="related-game-card group">
+          <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-purple-900/60 to-indigo-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
+            <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Baba Is You</span>
+          </div>
+          <h3 class="font-heading font-bold text-white text-sm group-hover:text-rail-green transition-colors">Baba Is You</h3>
+          <span class="text-xs text-gray-500">Puzzle / Logic</span>
+        </a>
+
+        <a href="#" class="related-game-card group">
+          <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-sky-900/60 to-cyan-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
+            <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Cosmic Express</span>
+          </div>
+          <h3 class="font-heading font-bold text-white text-sm group-hover:text-rail-green transition-colors">Cosmic Express</h3>
+          <span class="text-xs text-gray-500">Train / Puzzle</span>
+        </a>
+
+        <a href="#" class="related-game-card group">
+          <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-amber-900/60 to-orange-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
+            <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Train Valley</span>
+          </div>
+          <h3 class="font-heading font-bold text-white text-sm group-hover:text-rail-green transition-colors">Train Valley</h3>
+          <span class="text-xs text-gray-500">Train / Strategy</span>
+        </a>
+
+        <a href="#" class="related-game-card group">
+          <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-rose-900/60 to-pink-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
+            <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Mini Motorways</span>
+          </div>
+          <h3 class="font-heading font-bold text-white text-sm group-hover:text-rail-green transition-colors">Mini Motorways</h3>
+          <span class="text-xs text-gray-500">Route / Strategy</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-rail-border mt-8">
+    <div class="max-w-[1200px] mx-auto px-4 py-8 text-center space-y-3">
+      <p class="text-gray-500 text-sm">&copy; 2026 RailmountGame.com. Railmount is developed by Hempuli.</p>
+      <p class="text-gray-600 text-xs">This website is a fan site and is not affiliated with the game developer. Game content is embedded from itch.io.</p>
+      <div class="flex items-center justify-center gap-4 text-xs text-gray-600">
+        <a href="#" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
+        <span>&middot;</span>
+        <a href="#" class="hover:text-gray-400 transition-colors">Terms</a>
+        <span>&middot;</span>
+        <a href="#" class="hover:text-gray-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
