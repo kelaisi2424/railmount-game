@@ -186,43 +186,16 @@
         Play Railmount
       </h2>
 
-      <div class="game-wrapper max-w-[960px] mx-auto">
-        <!-- Loading State -->
-        <div id="game-loading" class="game-loading">
-          <div class="spinner"></div>
-          <p class="mt-4 text-gray-400 text-sm">Loading Railmount...</p>
-        </div>
-
-        <!-- Click-to-activate overlay (prevents iframe from stealing scroll) -->
-        <div id="game-overlay" class="game-overlay">
-          <div class="game-overlay-content">
-            <span class="text-4xl mb-3 block">&#x1F682;</span>
-            <span class="font-heading font-bold text-lg text-white">Click to Play Railmount</span>
-            <span class="text-gray-400 text-sm mt-1">Click anywhere here to activate the game</span>
-          </div>
-        </div>
-
-        <!-- Game iframe (lazy loaded, pointer-events disabled until activated) -->
-        <iframe
-          id="game-iframe"
-          class="game-iframe"
-          title="Railmount - Train Puzzle Game"
-          scrolling="no"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
-
-      <!-- Toolbar -->
-      <div class="flex items-center justify-center gap-3 mt-4 max-w-[960px] mx-auto flex-wrap">
-        <button id="btn-fullscreen" class="toolbar-btn" title="Fullscreen">
-          <span>&#x26F6;</span> Fullscreen
-        </button>
-        <button id="btn-reload" class="toolbar-btn" title="Reload Game">
-          <span>&#x1F504;</span> Reload
-        </button>
-        <div class="toolbar-btn cursor-default" title="User Rating">
-          <span>&#x2B50;</span> Rate 5/5
+      <div class="game-card max-w-[960px] mx-auto">
+        <div class="game-card-rail"></div>
+        <div class="game-card-content">
+          <span class="text-6xl mb-4 block">&#x1F682;</span>
+          <h3 class="font-heading font-bold text-3xl md:text-4xl text-white mb-2">Railmount</h3>
+          <p class="text-gray-400 text-lg mb-8">A train puzzle game by Hempuli</p>
+          <button onclick="window.open('https://hempuli.itch.io/railmount','_blank')" class="inline-flex items-center gap-2 bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:shadow-rail-green/30 hover:-translate-y-0.5 cursor-pointer">
+            &#x1F3AE; Play Railmount on itch.io
+          </button>
+          <p class="text-gray-600 text-sm mt-4">Opens in a new tab &middot; Free, no download required</p>
         </div>
       </div>
     </section>

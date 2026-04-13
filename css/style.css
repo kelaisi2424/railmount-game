@@ -75,94 +75,73 @@ body {
   }
 }
 
-/* ===== Game Area ===== */
-.game-wrapper {
+/* ===== Game Card ===== */
+.game-card {
   position: relative;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid #1e1e2e;
   box-shadow:
     0 0 0 1px rgba(34, 197, 94, 0.05),
-    0 0 40px rgba(34, 197, 94, 0.05),
+    0 0 60px rgba(34, 197, 94, 0.08),
     0 8px 32px rgba(0, 0, 0, 0.4);
-  background: #000;
-  height: 500px;
-  max-height: 70vh;
+  background: #0d0d14;
+  padding: 60px 24px;
 }
 
-.game-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.game-iframe.loaded {
-  opacity: 1;
-}
-
-.game-iframe.active {
-  pointer-events: auto;
-}
-
-/* Click-to-activate Overlay */
-.game-overlay {
+.game-card-rail {
   position: absolute;
   inset: 0;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.game-overlay.hidden {
-  opacity: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 58px,
+      rgba(34, 197, 94, 0.06) 58px,
+      rgba(34, 197, 94, 0.06) 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 58px,
+      rgba(34, 197, 94, 0.06) 58px,
+      rgba(34, 197, 94, 0.06) 60px
+    );
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 70%);
   pointer-events: none;
 }
 
-.game-overlay-content {
+/* Animated dashed rail lines */
+.game-card-rail::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(34, 197, 94, 0.25) 0px,
+    rgba(34, 197, 94, 0.25) 20px,
+    transparent 20px,
+    transparent 30px
+  );
+  border-radius: 2px;
+  animation: railMove 3s linear infinite;
+}
+
+@keyframes railMove {
+  from { background-position: 0 0; }
+  to { background-position: 30px 0; }
+}
+
+.game-card-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 24px;
-}
-
-/* Loading Spinner */
-.game-loading {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-  z-index: 10;
-  transition: opacity 0.4s ease;
-}
-
-.game-loading.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.spinner {
-  width: 48px;
-  height: 48px;
-  border: 3px solid rgba(34, 197, 94, 0.15);
-  border-top-color: #22c55e;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
 }
 
 /* ===== Toolbar Buttons ===== */

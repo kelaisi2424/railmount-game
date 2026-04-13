@@ -1,81 +1,14 @@
 /**
  * Railmount Game Site - main.js
- * Handles: iframe lazy load, fullscreen, reload, navbar scroll, smooth scroll
+ * Handles: navbar scroll effect, smooth scroll for anchor links
  */
 
 (function () {
   'use strict';
 
-  const GAME_URL = 'https://hempuli.itch.io/railmount';
-  const LOAD_DELAY = 500;
-
-  // --- DOM Elements ---
-  const iframe = document.getElementById('game-iframe');
-  const loading = document.getElementById('game-loading');
-  const overlay = document.getElementById('game-overlay');
-  const btnFullscreen = document.getElementById('btn-fullscreen');
-  const btnReload = document.getElementById('btn-reload');
-  const navbar = document.getElementById('navbar');
-
-  // --- Lazy Load Game iframe ---
-  function loadGame() {
-    if (iframe.src) return;
-    setTimeout(function () {
-      iframe.src = GAME_URL;
-    }, LOAD_DELAY);
-  }
-
-  iframe.addEventListener('load', function () {
-    if (!iframe.src) return;
-    iframe.classList.add('loaded');
-    if (loading) {
-      loading.classList.add('hidden');
-    }
-  });
-
-  loadGame();
-
-  // --- Click-to-activate: overlay hides, iframe gets pointer-events ---
-  overlay.addEventListener('click', function () {
-    overlay.classList.add('hidden');
-    iframe.classList.add('active');
-  });
-
-  // Deactivate iframe when user clicks outside the game wrapper
-  document.addEventListener('click', function (e) {
-    var wrapper = iframe.closest('.game-wrapper');
-    if (wrapper && !wrapper.contains(e.target)) {
-      iframe.classList.remove('active');
-      overlay.classList.remove('hidden');
-    }
-  });
-
-  // --- Fullscreen ---
-  btnFullscreen.addEventListener('click', function () {
-    var wrapper = iframe.closest('.game-wrapper') || iframe;
-    if (wrapper.requestFullscreen) {
-      wrapper.requestFullscreen();
-    } else if (wrapper.webkitRequestFullscreen) {
-      wrapper.webkitRequestFullscreen();
-    } else if (wrapper.msRequestFullscreen) {
-      wrapper.msRequestFullscreen();
-    }
-  });
-
-  // --- Reload Game ---
-  btnReload.addEventListener('click', function () {
-    iframe.classList.remove('loaded');
-    if (loading) {
-      loading.classList.remove('hidden');
-    }
-    iframe.src = '';
-    setTimeout(function () {
-      iframe.src = GAME_URL;
-    }, 100);
-  });
+  var navbar = document.getElementById('navbar');
 
   // --- Navbar Scroll Effect ---
-  var lastScroll = 0;
   window.addEventListener('scroll', function () {
     var scrollY = window.scrollY || window.pageYOffset;
     if (scrollY > 50) {
@@ -83,7 +16,6 @@
     } else {
       navbar.classList.remove('scrolled');
     }
-    lastScroll = scrollY;
   }, { passive: true });
 
   // --- Smooth Scroll for Anchor Links ---
