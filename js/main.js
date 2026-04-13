@@ -12,6 +12,7 @@
   // --- DOM Elements ---
   const iframe = document.getElementById('game-iframe');
   const loading = document.getElementById('game-loading');
+  const overlay = document.getElementById('game-overlay');
   const btnFullscreen = document.getElementById('btn-fullscreen');
   const btnReload = document.getElementById('btn-reload');
   const navbar = document.getElementById('navbar');
@@ -33,6 +34,21 @@
   });
 
   loadGame();
+
+  // --- Click-to-activate: overlay hides, iframe gets pointer-events ---
+  overlay.addEventListener('click', function () {
+    overlay.classList.add('hidden');
+    iframe.classList.add('active');
+  });
+
+  // Deactivate iframe when user clicks outside the game wrapper
+  document.addEventListener('click', function (e) {
+    var wrapper = iframe.closest('.game-wrapper');
+    if (wrapper && !wrapper.contains(e.target)) {
+      iframe.classList.remove('active');
+      overlay.classList.remove('hidden');
+    }
+  });
 
   // --- Fullscreen ---
   btnFullscreen.addEventListener('click', function () {

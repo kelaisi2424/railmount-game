@@ -193,11 +193,21 @@
           <p class="mt-4 text-gray-400 text-sm">Loading Railmount...</p>
         </div>
 
-        <!-- Game iframe (lazy loaded) -->
+        <!-- Click-to-activate overlay (prevents iframe from stealing scroll) -->
+        <div id="game-overlay" class="game-overlay">
+          <div class="game-overlay-content">
+            <span class="text-4xl mb-3 block">&#x1F682;</span>
+            <span class="font-heading font-bold text-lg text-white">Click to Play Railmount</span>
+            <span class="text-gray-400 text-sm mt-1">Click anywhere here to activate the game</span>
+          </div>
+        </div>
+
+        <!-- Game iframe (lazy loaded, pointer-events disabled until activated) -->
         <iframe
           id="game-iframe"
           class="game-iframe"
           title="Railmount - Train Puzzle Game"
+          scrolling="no"
           allowfullscreen
           loading="lazy"
         ></iframe>
