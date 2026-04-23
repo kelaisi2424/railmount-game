@@ -144,12 +144,19 @@
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="/" class="font-heading font-bold text-lg text-white flex items-center gap-2 hover:text-rail-green transition-colors">
+    <div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <a href="/" class="font-heading font-bold text-lg text-white flex items-center gap-2 hover:text-rail-green transition-colors shrink-0">
         <span class="text-2xl">&#x1F682;</span>
-        <span>RailmountGame.com</span>
+        <span class="hidden sm:inline">RailmountGame.com</span>
+        <span class="sm:hidden">Railmount</span>
       </a>
-      <a href="#game" class="bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold text-sm px-5 py-2 rounded-lg transition-all hover:shadow-lg hover:shadow-rail-green/20">
+      <div class="hidden md:flex items-center gap-6 text-sm font-heading font-medium">
+        <a href="/" class="text-white hover:text-rail-green transition-colors">Home</a>
+        <a href="/walkthrough.html" class="text-gray-300 hover:text-rail-green transition-colors">Guide</a>
+        <a href="/tips.html" class="text-gray-300 hover:text-rail-green transition-colors">Tips</a>
+        <a href="/similar-games.html" class="text-gray-300 hover:text-rail-green transition-colors">Similar Games</a>
+      </div>
+      <a href="#game" class="bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold text-sm px-4 md:px-5 py-2 rounded-lg transition-all hover:shadow-lg hover:shadow-rail-green/20 shrink-0">
         Play Now &darr;
       </a>
     </div>
@@ -397,10 +404,11 @@
 
     <!-- ===== RELATED GAMES ===== -->
     <section class="py-12 border-t border-rail-border">
-      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-8">Games Like Railmount</h2>
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-3">Games Like Railmount</h2>
+      <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">A sample of train and puzzle games you will enjoy. <a href="/similar-games.html" class="text-rail-green hover:underline">See our full list of 10 games like Railmount &rarr;</a></p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-        <a href="#" class="related-game-card group">
+        <a href="/similar-games.html#baba-is-you" class="related-game-card group">
           <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-purple-900/60 to-indigo-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
             <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Baba Is You</span>
           </div>
@@ -408,7 +416,7 @@
           <span class="text-xs text-gray-500">Puzzle / Logic</span>
         </a>
 
-        <a href="#" class="related-game-card group">
+        <a href="/similar-games.html#cosmic-express" class="related-game-card group">
           <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-sky-900/60 to-cyan-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
             <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Cosmic Express</span>
           </div>
@@ -416,7 +424,7 @@
           <span class="text-xs text-gray-500">Train / Puzzle</span>
         </a>
 
-        <a href="#" class="related-game-card group">
+        <a href="/similar-games.html#train-valley" class="related-game-card group">
           <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-amber-900/60 to-orange-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
             <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Train Valley</span>
           </div>
@@ -424,7 +432,7 @@
           <span class="text-xs text-gray-500">Train / Strategy</span>
         </a>
 
-        <a href="#" class="related-game-card group">
+        <a href="/similar-games.html#mini-motorways" class="related-game-card group">
           <div class="aspect-[4/3] rounded-lg mb-3 bg-gradient-to-br from-rose-900/60 to-pink-800/40 border border-rail-border flex items-center justify-center group-hover:border-rail-green/40 transition-colors">
             <span class="font-heading font-bold text-white/70 text-center text-sm px-2">Mini Motorways</span>
           </div>
@@ -435,19 +443,66 @@
       </div>
     </section>
 
+    <!-- ===== DISCOVER MORE SECTION ===== -->
+    <section class="py-12 border-t border-rail-border">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-8">Discover More</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/walkthrough.html" class="feature-card block hover:border-rail-green/30">
+          <div class="text-3xl mb-3">&#x1F5FA;&#xFE0F;</div>
+          <h3 class="font-heading font-bold text-white mb-1">Walkthrough &amp; Solutions</h3>
+          <p class="text-gray-400 text-sm">Stuck on a level? Our complete Railmount walkthrough covers strategy for every stage.</p>
+        </a>
+        <a href="/tips.html" class="feature-card block hover:border-rail-green/30">
+          <div class="text-3xl mb-3">&#x1F4A1;</div>
+          <h3 class="font-heading font-bold text-white mb-1">Tips &amp; Strategy</h3>
+          <p class="text-gray-400 text-sm">10 essential Railmount tips to sharpen your track-laying and solve puzzles faster.</p>
+        </a>
+        <a href="/similar-games.html" class="feature-card block hover:border-rail-green/30">
+          <div class="text-3xl mb-3">&#x1F3AE;</div>
+          <h3 class="font-heading font-bold text-white mb-1">10 Games Like Railmount</h3>
+          <p class="text-gray-400 text-sm">Love Railmount? Discover 10 more brilliant train and puzzle games to play next.</p>
+        </a>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="border-t border-rail-border mt-8">
-    <div class="max-w-[1200px] mx-auto px-4 py-8 text-center space-y-3">
-      <p class="text-gray-500 text-sm">&copy; 2026 RailmountGame.com. Railmount is developed by Hempuli.</p>
-      <p class="text-gray-600 text-xs">This website is a fan site and is not affiliated with the game developer. Game content is embedded from itch.io.</p>
-      <div class="flex items-center justify-center gap-4 text-xs text-gray-600">
-        <a href="#" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
-        <span>&middot;</span>
-        <a href="#" class="hover:text-gray-400 transition-colors">Terms</a>
-        <span>&middot;</span>
-        <a href="#" class="hover:text-gray-400 transition-colors">Contact</a>
+    <div class="max-w-[1200px] mx-auto px-4 py-10 space-y-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+        <div>
+          <h4 class="font-heading font-bold text-white mb-3 flex items-center gap-2"><span>&#x1F682;</span> Play</h4>
+          <ul class="space-y-2 text-gray-500">
+            <li><a href="/" class="hover:text-rail-green transition-colors">Home</a></li>
+            <li><a href="https://hempuli.itch.io/railmount" target="_blank" rel="noopener" class="hover:text-rail-green transition-colors">Play Railmount</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white mb-3 flex items-center gap-2"><span>&#x1F4DA;</span> Guides</h4>
+          <ul class="space-y-2 text-gray-500">
+            <li><a href="/walkthrough.html" class="hover:text-rail-green transition-colors">Walkthrough</a></li>
+            <li><a href="/tips.html" class="hover:text-rail-green transition-colors">Tips &amp; Strategy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white mb-3 flex items-center gap-2"><span>&#x1F3AE;</span> Discover</h4>
+          <ul class="space-y-2 text-gray-500">
+            <li><a href="/similar-games.html" class="hover:text-rail-green transition-colors">Similar Games</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white mb-3 flex items-center gap-2"><span>&#x2139;&#xFE0F;</span> About</h4>
+          <ul class="space-y-2 text-gray-500">
+            <li><a href="#" class="hover:text-rail-green transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-rail-green transition-colors">Terms</a></li>
+            <li><a href="#" class="hover:text-rail-green transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-6 border-t border-rail-border space-y-2">
+        <p class="text-gray-500 text-sm">&copy; 2026 RailmountGame.com. Railmount is developed by Hempuli.</p>
+        <p class="text-gray-600 text-xs">This website is a fan site and is not affiliated with the game developer.</p>
       </div>
     </div>
   </footer>
