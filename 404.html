@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | RailmountGame.com</title>
+  <meta name="description" content="This page couldn't be found. Head back to RailmountGame.com to play Railmount online for free.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://railmountgame.com/404.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rail: {
+              bg: '#0a0a0f',
+              card: '#12121a',
+              border: '#1e1e2e',
+              green: '#22c55e',
+              orange: '#ea580c',
+              muted: '#6b7280',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'system-ui', 'sans-serif'],
+            body: ['system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Outfit 500, 700 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-rail-bg text-gray-200 font-body min-h-screen flex flex-col">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <a href="/" class="font-heading font-bold text-lg text-white flex items-center gap-2 hover:text-rail-green transition-colors shrink-0">
+        <span class="text-2xl">&#x1F682;</span>
+        <span class="hidden sm:inline">RailmountGame.com</span>
+        <span class="sm:hidden">Railmount</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-heading font-medium">
+        <a href="/" class="text-gray-300 hover:text-rail-green transition-colors">Home</a>
+        <a href="/walkthrough.html" class="text-gray-300 hover:text-rail-green transition-colors">Guide</a>
+        <a href="/tips.html" class="text-gray-300 hover:text-rail-green transition-colors">Tips</a>
+        <a href="/similar-games.html" class="text-gray-300 hover:text-rail-green transition-colors">Similar Games</a>
+      </div>
+      <a href="https://hempuli.itch.io/railmount" target="_blank" rel="noopener" class="bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold text-sm px-4 md:px-5 py-2 rounded-lg transition-all hover:shadow-lg hover:shadow-rail-green/20 shrink-0">
+        Play Now &rarr;
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="flex-1 flex items-center justify-center px-4 pt-24 pb-12 relative overflow-hidden">
+    <div class="hero-grid absolute inset-0"></div>
+    <div class="relative max-w-2xl mx-auto text-center">
+      <div class="text-7xl md:text-9xl mb-4 select-none">&#x1F682;&#x1F4A8;</div>
+      <p class="font-heading font-bold text-rail-green text-lg mb-2 tracking-widest">ERROR 404</p>
+      <h1 class="font-heading font-bold text-4xl md:text-6xl text-white mb-4 leading-tight">
+        This train went off the rails
+      </h1>
+      <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+        The page you are looking for does not exist or has been moved. Let us get you back on track.
+      </p>
+      <div class="flex items-center justify-center gap-3 flex-wrap">
+        <a href="/" class="inline-flex items-center gap-2 bg-rail-green hover:bg-emerald-400 text-rail-bg font-heading font-bold px-6 py-3 rounded-xl transition-all hover:shadow-lg hover:shadow-rail-green/20">
+          &larr; Back to Home
+        </a>
+        <a href="https://hempuli.itch.io/railmount" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-rail-card hover:bg-rail-border border border-rail-border hover:border-rail-green/30 text-white font-heading font-bold px-6 py-3 rounded-xl transition-all">
+          &#x1F3AE; Play Railmount
+        </a>
+      </div>
+
+      <!-- Helpful Links -->
+      <div class="mt-12 pt-8 border-t border-rail-border">
+        <p class="text-gray-500 text-sm mb-4">Or maybe you were looking for:</p>
+        <div class="flex items-center justify-center gap-4 flex-wrap text-sm">
+          <a href="/walkthrough.html" class="text-rail-green hover:underline">Walkthrough</a>
+          <span class="text-gray-700">&bull;</span>
+          <a href="/tips.html" class="text-rail-green hover:underline">Tips &amp; Strategy</a>
+          <span class="text-gray-700">&bull;</span>
+          <a href="/similar-games.html" class="text-rail-green hover:underline">Similar Games</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-rail-border">
+    <div class="max-w-[1200px] mx-auto px-4 py-6 text-center space-y-1">
+      <p class="text-gray-500 text-sm">&copy; 2026 RailmountGame.com. Railmount is developed by Hempuli.</p>
+      <p class="text-gray-600 text-xs">This website is a fan site and is not affiliated with the game developer.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
